@@ -1,6 +1,6 @@
 # Kubernetes example for Hack the Fog hackathon
 
-In this example, we show how you can containerize a simple flask app that reads and displays the water temperature data from quality sensor. It subscribes to the `smart_water/49` MQTT topic and outputs the temperature data on a web interface.
+In this example, we show how you can containerize a simple flask app that reads and displays the water temperature data from the water quality sensor. It subscribes to the `smart_water/49` MQTT topic and outputs the temperature data on a web interface.
 
 ## Build the Docker image and push to an image repository (Docker Hub)
 
