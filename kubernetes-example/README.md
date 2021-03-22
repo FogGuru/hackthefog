@@ -4,9 +4,9 @@ In this example, we show how you can containerize a simple flask app that reads 
 
 ## Build the Docker image and push to an image repository (Docker Hub)
 
-In this example, we show building the image and pushing to a dockerhub repository.
+In this example, we show building the image and pushing to a Docker Hub repository.
 
-If you are using Docker Hub, please make sure that you have created an account on https://hub.docker.com/ and that you have installed Docker on your computer.
+If you are using Docker Hub, please make sure to create an account on https://hub.docker.com/ and to install Docker on your computer.
 
 Log in to your Docker Hub account by using the command
 
@@ -26,7 +26,7 @@ docker buildx build --platform linux/arm/v7 -t REPOSITORY_NAME/IMAGE_NAME --push
 
 You can deploy the application to Kubernetes using the `deployment.yaml` manifest file.
 
-Make sure to update the `REPOSITORY_NAME/IMAGE_NAME` the name of your Docker Hub repository name and the name of your Docker image.
+Make sure to update the `REPOSITORY_NAME/IMAGE_NAME` to the name of your Docker Hub repository name and the name of your Docker image.
 
 To deploy the application, use the command
 
