@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marina-weather-app
+  labels:
+    app: marina
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: marina
+  template:
+    metadata:
+      labels:
+        app: marina
+    spec:
+      containers:
+      - name: marina
+        image: docker.io/moule3053/marina-weather-arm
+        ports:
+        - containerPort: 5000
