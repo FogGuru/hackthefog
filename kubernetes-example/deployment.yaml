@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: marina
-        image: docker.io/moule3053/marina-weather-arm
+        image: REPOSITORY_NAME/IMAGE_NAME
         ports:
         - containerPort: 5000
