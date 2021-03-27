@@ -16,6 +16,19 @@ docker login
 
 You need to build a Docker image that is compatible with the arm7 architecture.
 
+Please edit the file `/etc/docker/daemon.json` and add the following:
+
+```
+{
+    "experimental": true
+}
+```
+
+Next, run the command
+```
+docker run --privileged --rm docker/binfmt:a7996909642ee92942dcd6cff44b9b95f08dad64
+```
+
 Inside the `app` directory, run the following command. Please replace `REPOSITORY_NAME` and `IMAGE_NAME` with the name of your Docker Hub repository name and the desired name for your image, respectively.
 
 ```
