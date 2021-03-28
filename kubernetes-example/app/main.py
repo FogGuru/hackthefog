@@ -66,7 +66,7 @@ def on_message(client, userdata, message):
     res = json.loads(formated_message)
     print(res)
     f = open("messages.log", "w")
-    f.write(str(res['SensorData']['RightToLeft']))
+    f.write(str(res['SensorData']['LeftToRight']))
     f.close()
 
 def subscribe_on_topic(topic = mqtt_topic):
