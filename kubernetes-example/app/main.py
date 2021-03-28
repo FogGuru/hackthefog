@@ -5,7 +5,7 @@ import json
 
 default_port=1883
 broker_address = "192.168.9.20"
-mqtt_topic = 'smart_water/49'
+mqtt_topic = 'people_counter/72'
 mqtt_user = 'participant'
 mqtt_password = 'participant'
 
@@ -19,7 +19,7 @@ def home():
     html = "<html>" \
            "<head><title>Welcome to La Marina de Valencia</title></head>" \
            "<body><h2>Welcome to La Marina de Valencia</h2>" \
-           "<body><h3>Current sea water conditions</h3>"
+           "<body><h3>Current beach-stip population</h3>"
 
     global subscribed
     if subscribed == False:
@@ -30,7 +30,7 @@ def home():
     #html = ''
     for line in list_lines:
         if line != '':
-            html += "<p>Temperature: " + str(line) + "</p>"
+            html += "<p> Number People just Entered in last 1 minute: " + str(line) + "</p>"
     #return html.format()
     return html
 
@@ -66,7 +66,7 @@ def on_message(client, userdata, message):
     res = json.loads(formated_message)
     print(res)
     f = open("messages.log", "w")
-    f.write(str(res['SensorData']['WaterTemperature']))
+    f.write(str(res['SensorData']['LeftToRight']))
     f.close()
 
 def subscribe_on_topic(topic = mqtt_topic):
